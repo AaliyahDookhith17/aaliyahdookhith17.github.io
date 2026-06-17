@@ -3,217 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Website</title>
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
+    <title>Aaliyah Dookhith Research Group</title>
 
-        /* Navigation */
-        header {
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        nav ul li {
-            margin-left: 20px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #1abc9c;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/1200/600') no-repeat center center/cover;
-            height: 60vh;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #1abc9c;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background-color: #16a085;
-        }
-
-        /* Container for content */
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        /* Sections */
-        section {
-            margin-bottom: 60px;
-        }
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #2c3e50;
-            border-bottom: 2px solid #1abc9c;
-            padding-bottom: 10px;
-        }
-
-        /* Grid for Cards */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        /* Contact Form */
-        form {
-            display: flex;
-            flex-direction: column;
-            max-width: 500px;
-        }
-        form input, form textarea {
-            margin-bottom: 15px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-        form button {
-            background-color: #2c3e50;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background 0.3s;
-        }
-        form button:hover {
-            background-color: #1a252f;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #2c3e50;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">MyWebsite</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="hero" id="home">
-        <h1>Welcome to My Website</h1>
-        <p>A simple, clean, and responsive HTML template built from scratch.</p>
-        <a href="#about" class="btn">Learn More</a>
+<header>
+  <div class="header-content">
+    <div class="site-title">
+        Aaliyah Dookhith Research Group
     </div>
 
-    <div class="container">
-        <section id="services">
-            <h2>Our Services</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Web Design</h3>
-                    <p>Creating beautiful, modern, and highly functional website layouts tailored to your brand.</p>
-                </div>
-                <div class="card">
-                    <h3>Development</h3>
-                    <p>Writing clean, efficient, and well-structured code to bring designs to life seamlessly.</p>
-                </div>
-                <div class="card">
-                    <h3>SEO Optimization</h3>
-                    <p>Ensuring your website ranks well on search engines so your audience can find you.</p>
-                </div>
-            </div>
-        </section>
+    <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="people.html">People</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    </div>
+</header>
 
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Lorem ipsum dolor sit matter, consectetur adipiscing elit. Donec elementum id id matches dynamic link. Phasellus vitae pretium sem. Holding a vision of pure and minimal web experiences, we aim to deliver code that is easy to read and easy to scale.</p>
-        </section>
+<main>
+<section class="section">
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form onsubmit="alert('Form submitted! (Simulation)'); return false;">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+    <div class="profile">
+
+        <div class="profile-image">
+            <img
+                src="images/Vision.jpg"
+                alt="Research Vision"
+                style="width:450px; margin-top:0px;"
+            >
+        </div>
+
+        <div class="profile-text">
+
+            <h2>From Bonds to Bulk</h2>
+
+            <p>
+                Our research aims to unveil the molecular origins of
+                large-strain behavior in dynamic polymers to enable
+                tough, healable, and recyclable materials.
+            </p>
+
+            <p>
+                Dynamic polymers, from natural systems such as DNA and
+                proteins to synthetic thermoplastics and emerging soft
+                materials, hold tremendous promise for sustainable
+                technologies. Yet the molecular processes governing
+                fracture, flow, and durability remain poorly understood.
+            </p>
+
+            <p>
+                We combine dynamic polymer chemistry with mechanochemistry
+                to visualize molecular damage and understand how dynamic
+                bonds redistribute stress, dissipate energy, and prevent
+                catastrophic failure. By uncovering these structure–property
+                relationships, we seek to establish molecular design
+                principles for materials that are simultaneously tough in
+                service, healable after damage, and recyclable at
+                end-of-life.
+            </p>
+
+        </div>
+
     </div>
 
-    <footer>
-        <p>&copy; 2026 MyWebsite. All rights reserved.</p>
-    </footer>
+</section>
+
+</main>
+
+
+<footer>
+    © 2026 Aaliyah Dookhith Research Group
+</footer>
 
 </body>
 </html>
