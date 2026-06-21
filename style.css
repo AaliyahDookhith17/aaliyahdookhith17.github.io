@@ -126,16 +126,31 @@ ol li a {
 /* Mobile */
 
 @media (max-width: 768px) {
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .site-nav {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
     .profile {
         flex-direction: column;
+        gap: 24px;
     }
 
     .profile-image {
         flex: none;
+        width: 100%;
     }
 
     .profile-image img {
         width: 100%;
-        max-width: 300px;
+        max-width: 450px;
+        height: auto;
     }
 }
