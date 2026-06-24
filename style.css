@@ -10,8 +10,7 @@ body {
     color: #222;
     background: #fff;
     line-height: 1.6;
-    /* ADDED */
-    font-size: 18px; /* The default browser size is usually 16px. 18px or 20px is great for readability. */
+    font-size: clamp(16px, 0.8vw + 0.7rem, 18px);
 }
 
 /* Header */
@@ -21,67 +20,83 @@ header {
 }
 
 .header-content {
-    /*max-width: 1000px;*/
     margin: 0 auto;
-    padding: 0.5% 2%;
-
+    padding: clamp(8px, 0.1vw, 18px) 2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.4rem;
+    gap: 24px;
 }
+
 .logo-group {
     display: flex;
-    align-items: center; /* Keeps your name perfectly centered vertically next to the larger GIF */
-    gap: 15px;           /* Slightly more space looks better with a larger image */
+    align-items: center;
+    gap: clamp(10px, 1.5vw, 18px);
+    min-width: 0;
 }
 
 .header-gif {
-    height: auto;        /* Increased size—adjust this number until it looks exactly how you want! */
-    width: 10vw;         /* Keeps the GIF's proportions perfect so it doesn't distort */
+    width: clamp(170px, 8vw, 95px);
+    height: auto;
     display: block;
+    flex-shrink: 0;
 }
+
 .site-title {
-    /*font-size: 1.4rem;*/
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
+    line-height: 1.2;
 }
 
 .site-nav {
     display: flex;
-    gap: 24px;
+    align-items: center;
+    gap: clamp(12px, 2vw, 24px);
+    flex-wrap: wrap;
 }
 
 .site-nav a {
     color: #1f4e3d;
     text-decoration: none;
     font-weight: 600;
+    font-size: clamp(1.5rem, 0.8vw, 1.10rem);
     margin: 0;
+    white-space: nowrap;
 }
-
 /* Main Content */
 
 main {
-    /*max-width: 1000px;*/
     margin: 0 auto;
-    padding: 5% 5%;
+    padding: clamp(28px, 5vw, 80px) 5%;
 }
-h1,h2 {
-    font-size: 1.4rem;
-    margin-block-start: 0em;
+
+h1,
+h2 {
+    font-size: clamp(1.25rem, 1.8vw + 0.7rem,1.5rem);
+    line-height: 1.2;
+    margin-block-start: 0;
 }
+
+h3 {
+    font-size: clamp(1.05rem, 0.9vw + 0.8rem, 1.35rem);
+    line-height: 1.25;
+}
+
+p,
+li {
+    font-size: clamp(0.95rem, 0.6vw + 0.7rem, 1.05rem);
+}
+
 .hero h1 {
-    font-size: 2.6rem;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.1;
     margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: clamp(1.05rem, 1vw + 0.8rem, 1.35rem);
     max-width: 750px;
-}
-
-.section {
-    /*margin-top: 50px;*/
 }
 
 /* Footer */
@@ -90,8 +105,10 @@ footer {
     border-top: 1px solid #ddd;
     padding: 20px 8%;
     color: #666;
-    font-size: 0.9rem;
+    font-size: clamp(0.85rem, 0.5vw + 0.65rem, 0.95rem);
 }
+
+/* Lists */
 
 ol {
     padding-left: 25px;
@@ -112,13 +129,11 @@ ol li a {
 
 .profile {
     display: flex;
-    gap: 30px;
+    gap: clamp(24px, 4vw, 50px);
     align-items: flex-start;
     width: 100%;
-    
-    /* ADD THESE TWO LINES */
-    max-width: 1500px;  /* Adjust this number to whatever looks best to you */
-    margin: 0 auto;     /* Centers the entire profile block on the screen */
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 .profile-image {
@@ -126,9 +141,9 @@ ol li a {
 }
 
 .profile-image img {
-    width: 100%;        
-    max-width: 600px;   
-    height: auto;       
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     display: block;
 }
 
@@ -150,40 +165,55 @@ ol li a {
 
 @media (max-width: 768px) {
 
+    .site-nav a {
+        font-size: 0.8rem;
+    }
+
     .header-content {
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
     }
 
+    .logo-group {
+        font-size: clamp(0.85rem, 1vw, 1.2rem);
+    }
+
+    .site-title {
+        font-size: 1em;
+    }
+
+    .header-gif {
+        width: 5em;
+    }
+
     .site-nav {
-        flex-wrap: wrap;
-        gap: 12px 18px;
+        width: 100%;
+        gap: 8px 14px;
     }
 
     .profile {
         flex-direction: column;
-        align-items: center;    /* Keeps text and images structured right down the center column */
+        align-items: center;
         gap: 24px;
         width: 100%;
-        box-sizing: border-box; /* Forces Safari to calculate widths accurately */
+        box-sizing: border-box;
     }
 
     .profile-image {
-    width: 100% !important;
-    max-width: 100% !important;        
-    display: block !important;
-    margin: 0 auto !important;
-    text-align: center !important;
-    box-sizing: border-box; 
-}
-
-    /* Force the image to elegantly fit smaller mobile widths without leaking over the right edge */
-    .profile-image img {
-        width: 100%;            /* Tells Safari to treat the max-width as the absolute limit */
-        max-width: 400px;       /* Keeps it perfectly framed on small device displays */
-        height: auto;           /* Solves layout skew/stretching distortion */
+        width: 100%;
+        max-width: 100%;
         display: block;
-        margin: 0 auto;         /* Centers the image asset directly inside the column track */
+        margin: 0 auto;
+        text-align: center;
+        box-sizing: border-box;
     }
- 
+
+    .profile-image img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+}
